@@ -4,51 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="664aa636-8a44-4e20-aac4-79c8de5dcabe" name="Changes" comment="seguimiento 2 java corte 1">
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio2/Appointment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ejercicio2/MainAppointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio10/MainRentalCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio10/MainRentalCost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio10/RentalCost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio10/RentalCost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio11/EvenOdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio11/EvenOdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio11/MainEvenOdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio11/MainEvenOdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio12/Grades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio12/Grades.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio12/MainGrades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio12/MainGrades.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio13/FindMaxim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio13/FindMaxim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio13/MainFindMaxim.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio13/MainFindMaxim.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio14/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio14/Help.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio14/MainHelp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio14/MainHelp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio15/GYM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio15/GYM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio15/MainGym.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio15/MainGym.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio16/TriangleValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio16/TriangleValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio17/PrintingCostCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio17/PrintingCostCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio18/ComputerStatusChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio18/ComputerStatusChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio18/MainComputerStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio18/MainComputerStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio19/CarModelChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio19/CarModelChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio19/MainCarModelCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio19/MainCarModelCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio2/Appoiment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio2/MainAppoiment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio20/CeluMovilCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio20/CeluMovilCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio20/MainCeluMovil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio20/MainCeluMovil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio21/MainSandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio21/MainSandwich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio21/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio21/Sandwich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio4/MainPaymentemployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio4/MainPaymentemployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio4/Paymentemployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio4/Paymentemployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio6/MainShipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio6/MainShipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio6/Shipment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio6/Shipment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio7/ComplaintManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio7/ComplaintManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio7/MainComplaintManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio7/MainComplaintManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio8/MainPay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio8/MainPay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio8/Pay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio8/Pay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio9/MainNumberCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio9/MainNumberCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ejercicio9/NumberCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ejercicio9/NumberCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejercicio1/MainUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio1/MainUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejercicio1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio1/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejercicio3/Loanbooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio3/Loanbooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejercicio3/MainLoanbooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio3/MainLoanbooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejercicio5/MainRecatngle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio5/MainRecatngle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejercicio5/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejercicio5/Rectangle.java" afterDir="false" />
-    </list>
+    <list default="true" id="664aa636-8a44-4e20-aac4-79c8de5dcabe" name="Changes" comment="seguimiento 2 java corte 1, modificado con constructor." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,7 +183,7 @@
       <workItem from="1721748639683" duration="654000" />
       <workItem from="1721751745840" duration="92000" />
       <workItem from="1722359570873" duration="2277000" />
-      <workItem from="1722472152659" duration="5924000" />
+      <workItem from="1722472152659" duration="6250000" />
     </task>
     <task id="LOCAL-00001" summary="seguimiento 2 java corte 1">
       <option name="closed" value="true" />
@@ -237,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721705501943</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="seguimiento 2 java corte 1, modificado con constructor.">
+      <option name="closed" value="true" />
+      <created>1722478337618</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722478337618</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +221,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="seguimiento 2 java corte 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="seguimiento 2 java corte 1" />
+    <MESSAGE value="seguimiento 2 java corte 1, modificado con constructor." />
+    <option name="LAST_COMMIT_MESSAGE" value="seguimiento 2 java corte 1, modificado con constructor." />
   </component>
 </project>
