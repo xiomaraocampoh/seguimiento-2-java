@@ -5,15 +5,30 @@ import javax.swing.*;
 public class CarModelChecker {
     private int carModel;
 
-    public void requestModelAndCheck() {
-        carModel = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter your car model number: "));
-
-        String message = isDefectiveModel(carModel) ?
-                "The car is defective, take it to warranty." :  "Your car is not defective.";
-        JOptionPane.showMessageDialog(null, message);
+    public CarModelChecker(int carModel) {
+        this.carModel = carModel;
     }
 
-    private boolean isDefectiveModel(int model) {
-        return model == 119 || model == 179 || (model >= 189 && model <= 195) || model == 221 || model == 780;
+    public int getCarModel() {
+        return carModel;
+    }
+
+    public void setCarModel(int carModel) {
+        this.carModel = carModel;
+    }
+
+    private boolean isDefectiveModel() {
+        return carModel == 119 || carModel == 179 || (carModel >= 189 && carModel <= 195) || carModel == 221 || carModel == 780;
+    }
+
+    @Override
+    public String toString() {
+        return isDefectiveModel() ?
+                "The car is defective, take it to warranty." : "Your car is not defective.";
+    }
+
+    public void requestModelAndCheck() {
+        setCarModel(Integer.parseInt(JOptionPane.showInputDialog(null, "Enter your car model number: ")));
+        JOptionPane.showMessageDialog(null, toString());
     }
 }

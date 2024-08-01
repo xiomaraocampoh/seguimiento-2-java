@@ -3,53 +3,23 @@ package Ejercicio12;
 import javax.swing.*;
 
 public class Grades {
+
     private double physicsGrade;
     private double chemistryGrade;
     private double biologyGrade;
     private double mathGrade;
     private double computerScienceGrade;
-    double average = calculateAverage();
-    String rating = determineRating(average);
+    private double average;
+    private String rating;
 
-
-    public double getBiologyGrade() {
-        return biologyGrade;
-    }
-
-    public double getAverage() {
-        return average;
-    }
-
-    public void setAverage(double average) {
-        this.average = average;
-    }
-
-    public void setBiologyGrade(double biologyGrade) {
-        this.biologyGrade = biologyGrade;
-    }
-
-    public double getChemistryGrade() {
-        return chemistryGrade;
-    }
-
-    public void setChemistryGrade(double chemistryGrade) {
+    public Grades(double physicsGrade, double chemistryGrade, double biologyGrade, double mathGrade, double computerScienceGrade) {
+        this.physicsGrade = physicsGrade;
         this.chemistryGrade = chemistryGrade;
-    }
-
-    public double getComputerScienceGrade() {
-        return computerScienceGrade;
-    }
-
-    public void setComputerScienceGrade(double computerScienceGrade) {
-        this.computerScienceGrade = computerScienceGrade;
-    }
-
-    public double getMathGrade() {
-        return mathGrade;
-    }
-
-    public void setMathGrade(double mathGrade) {
+        this.biologyGrade = biologyGrade;
         this.mathGrade = mathGrade;
+        this.computerScienceGrade = computerScienceGrade;
+        this.average = calculateAverage();
+        this.rating = determineRating(this.average);
     }
 
     public double getPhysicsGrade() {
@@ -58,23 +28,51 @@ public class Grades {
 
     public void setPhysicsGrade(double physicsGrade) {
         this.physicsGrade = physicsGrade;
+        updateAverageAndRating();
+    }
+
+    public double getChemistryGrade() {
+        return chemistryGrade;
+    }
+
+    public void setChemistryGrade(double chemistryGrade) {
+        this.chemistryGrade = chemistryGrade;
+        updateAverageAndRating();
+    }
+
+    public double getBiologyGrade() {
+        return biologyGrade;
+    }
+
+    public void setBiologyGrade(double biologyGrade) {
+        this.biologyGrade = biologyGrade;
+        updateAverageAndRating();
+    }
+
+    public double getMathGrade() {
+        return mathGrade;
+    }
+
+    public void setMathGrade(double mathGrade) {
+        this.mathGrade = mathGrade;
+        updateAverageAndRating();
+    }
+
+    public double getComputerScienceGrade() {
+        return computerScienceGrade;
+    }
+
+    public void setComputerScienceGrade(double computerScienceGrade) {
+        this.computerScienceGrade = computerScienceGrade;
+        updateAverageAndRating();
+    }
+
+    public double getAverage() {
+        return average;
     }
 
     public String getRating() {
         return rating;
-    }
-
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
-
-    public void requestGradesAndEvaluate() {
-
-        physicsGrade = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the grade for Physics (0-10): "));
-        chemistryGrade = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the grade for Chemistry (0-10): "));
-        biologyGrade = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the grade for Biology (0-10): "));
-        mathGrade = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the grade for Math (0-10): "));
-        computerScienceGrade = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the grade for Computer Science (0-10): "));
     }
 
     private double calculateAverage() {
@@ -90,12 +88,26 @@ public class Grades {
             return "Excellent";
         }
     }
-    private void displayGradesAndAverage(double average) {
+
+    private void updateAverageAndRating() {
+        this.average = calculateAverage();
+        this.rating = determineRating(this.average);
+    }
+
+    public void displayGradesAndAverage() {
         String message = String.format(
                 "Physics grade: %.2f\nChemistry grade: %.2f\nBiology grade: %.2f\nMath grade: %.2f\nComputer Science grade: %.2f\n\nAverage grade: %.2f\nRating: %s",
-                physicsGrade, chemistryGrade, biologyGrade, mathGrade, computerScienceGrade, average, determineRating(average)
+                physicsGrade, chemistryGrade, biologyGrade, mathGrade, computerScienceGrade, average, rating
         );
 
         JOptionPane.showMessageDialog(null, message);
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Grades{Physics: %.2f, Chemistry: %.2f, Biology: %.2f, Math: %.2f, Computer Science: %.2f, Average: %.2f, Rating: %s}",
+                physicsGrade, chemistryGrade, biologyGrade, mathGrade, computerScienceGrade, average, rating
+        );
     }
 }

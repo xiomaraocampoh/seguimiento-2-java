@@ -3,15 +3,28 @@ package Ejercicio6;
 import javax.swing.JOptionPane;
 
 public class Shipment {
-    public int trackingNumber;
+
+    private int trackingNumber;
     private String date;
     private String packagingType;
-    public String customerID;
-    public int weight;
-    public String originCity;
-    public String destinationCity;
-    public int cost;
+    private String customerID;
+    private int weight;
+    private String originCity;
+    private String destinationCity;
+    private int cost;
     private String deliveryStatus;
+
+    public Shipment(int trackingNumber, String date, String packagingType, String customerID, int weight, String originCity, String destinationCity, int cost, String deliveryStatus) {
+        this.trackingNumber = trackingNumber;
+        this.date = date;
+        this.packagingType = packagingType;
+        this.customerID = customerID;
+        this.weight = weight;
+        this.originCity = originCity;
+        this.destinationCity = destinationCity;
+        this.cost = cost;
+        this.deliveryStatus = deliveryStatus;
+    }
 
     public int getCost() {
         return cost;
@@ -85,33 +98,18 @@ public class Shipment {
         this.weight = weight;
     }
 
-    public void createShipment() {
-        JOptionPane.showMessageDialog(null, "Please enter the shipment details.");
-
-        trackingNumber = Integer.parseInt(JOptionPane.showInputDialog(null, "Tracking Number: "));
-        setDate(JOptionPane.showInputDialog(null, "Date: "));
-        setPackagingType(JOptionPane.showInputDialog(null, "Packaging Type: "));
-        customerID = JOptionPane.showInputDialog(null, "Customer ID: ");
-        weight = Integer.parseInt(JOptionPane.showInputDialog(null, "Weight: "));
-        originCity = JOptionPane.showInputDialog(null, "Origin City: ");
-        destinationCity = JOptionPane.showInputDialog(null, "Destination City: ");
-        cost = Integer.parseInt(JOptionPane.showInputDialog(null, "Cost: "));
-        setDeliveryStatus(JOptionPane.showInputDialog(null, "Delivery Status (Pending/Delivered): "));
-
-        JOptionPane.showMessageDialog(null, "Shipment created successfully");
-    }
-
-    public void showShipmentDetails() {
-        JOptionPane.showMessageDialog(null, "Shipment Details:\n" +
+    @Override
+    public String toString() {
+        return "Shipment Details:\n" +
                 "Tracking Number: " + trackingNumber + "\n" +
-                "Date: " + getDate() + "\n" +
-                "Packaging Type: " + getPackagingType() + "\n" +
+                "Date: " + date + "\n" +
+                "Packaging Type: " + packagingType + "\n" +
                 "Customer ID: " + customerID + "\n" +
                 "Weight: " + weight + "\n" +
                 "Origin City: " + originCity + "\n" +
                 "Destination City: " + destinationCity + "\n" +
                 "Cost: " + cost + "\n" +
-                "Delivery Status: " + getDeliveryStatus());
+                "Delivery Status: " + deliveryStatus;
     }
 
     public void calculateCostPerKilo() {
@@ -120,16 +118,12 @@ public class Shipment {
     }
 
     public void verifyDeliveryStatus() {
-        if ("Pending".equals(getDeliveryStatus())) {
+        if ("Pending".equals(deliveryStatus)) {
             JOptionPane.showMessageDialog(null, "The shipment is pending delivery.");
-        } else if ("Delivered".equals(getDeliveryStatus())) {
+        } else if ("Delivered".equals(deliveryStatus)) {
             JOptionPane.showMessageDialog(null, "The shipment has been delivered.");
         } else {
             JOptionPane.showMessageDialog(null, "Delivery status not recognized.");
         }
-    }
-
-    public void showReceptionMessage() {
-        JOptionPane.showMessageDialog(null, "Your shipment has been received successfully.");
     }
 }

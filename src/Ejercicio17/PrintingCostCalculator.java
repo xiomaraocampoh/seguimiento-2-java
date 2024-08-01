@@ -5,6 +5,22 @@ import javax.swing.*;
 public class PrintingCostCalculator {
     private int numberOfCopies;
 
+    public PrintingCostCalculator(int numberOfCopies) {
+        this.numberOfCopies = numberOfCopies;
+    }
+
+    public PrintingCostCalculator() {
+        this(0);
+    }
+
+    public int getNumberOfCopies() {
+        return numberOfCopies;
+    }
+
+    public void setNumberOfCopies(int numberOfCopies) {
+        this.numberOfCopies = numberOfCopies;
+    }
+
     public void requestCopiesAndCalculateCost() {
         numberOfCopies = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of copies: "));
 
@@ -25,5 +41,10 @@ public class PrintingCostCalculator {
         } else {
             return 120.0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return String.format("PrintingCostCalculator{numberOfCopies: %d}", numberOfCopies);
     }
 }

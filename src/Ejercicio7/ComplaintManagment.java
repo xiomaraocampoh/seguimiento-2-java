@@ -5,64 +5,78 @@ import javax.swing.*;
 import javax.swing.JOptionPane;
 
 public class ComplaintManagment {
-    public int complaintNumber;
+
+    private int complaintNumber;
     private String personName;
     private String subject;
-    public String complaintDescription;
+    private String complaintDescription;
     private String complaintStatus;
 
-    public void createComplaint() {
-        JOptionPane.showMessageDialog(null, "Please enter the complaint details.");
-
-        complaintNumber = Integer.parseInt(JOptionPane.showInputDialog(null, "Complaint Number: "));
-        setPersonName(JOptionPane.showInputDialog(null, "Person Name: "));
-        setSubject(JOptionPane.showInputDialog(null, "Subject: "));
-        complaintDescription = JOptionPane.showInputDialog(null, "Complaint Description: ");
-        setComplaintStatus(JOptionPane.showInputDialog(null, "Complaint Status (Pending/Resolved): "));
-
-        JOptionPane.showMessageDialog(null, "Complaint created successfully");
-    }
-
-    public void showComplaintDescription() {
-        JOptionPane.showMessageDialog(null, "Complaint Description:\n" +
-                "Complaint Number: " + complaintNumber + "\n" +
-                "Person Name: " + personName + "\n" +
-                "Subject: " + subject + "\n" +
-                "Description: " + complaintDescription + "\n" +
-                "Status: " + complaintStatus);
-    }
-
-    public void validateComplaintStatus() {
-        if ("Pending".equals(this.complaintStatus)) {
-            JOptionPane.showMessageDialog(null, "The complaint is pending review.");
-        } else if ("Resolved".equals(this.complaintStatus)) {
-            JOptionPane.showMessageDialog(null, "The complaint has been resolved.");
-        } else {
-            JOptionPane.showMessageDialog(null, "Complaint status not recognized.");
-        }
-    }
-
-    public void showReceptionMessage() {
-        JOptionPane.showMessageDialog(null, "Your complaint has been received successfully.");
-    }
-
-    public void setComplaintDescription(String complaintDescription) {
+    public ComplaintManagment(int complaintNumber, String personName, String subject, String complaintDescription, String complaintStatus) {
+        this.complaintNumber = complaintNumber;
+        this.personName = personName;
+        this.subject = subject;
         this.complaintDescription = complaintDescription;
+        this.complaintStatus = complaintStatus;
+    }
+
+    public int getComplaintNumber() {
+        return complaintNumber;
     }
 
     public void setComplaintNumber(int complaintNumber) {
         this.complaintNumber = complaintNumber;
     }
 
-    public void setComplaintStatus(String complaintStatus) {
-        this.complaintStatus = complaintStatus;
+    public String getPersonName() {
+        return personName;
     }
 
     public void setPersonName(String personName) {
         this.personName = personName;
     }
 
+    public String getSubject() {
+        return subject;
+    }
+
     public void setSubject(String subject) {
         this.subject = subject;
+    }
+
+    public String getComplaintDescription() {
+        return complaintDescription;
+    }
+
+    public void setComplaintDescription(String complaintDescription) {
+        this.complaintDescription = complaintDescription;
+    }
+
+    public String getComplaintStatus() {
+        return complaintStatus;
+    }
+
+    public void setComplaintStatus(String complaintStatus) {
+        this.complaintStatus = complaintStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "Complaint Description:\n" +
+                "Complaint Number: " + complaintNumber + "\n" +
+                "Person Name: " + personName + "\n" +
+                "Subject: " + subject + "\n" +
+                "Description: " + complaintDescription + "\n" +
+                "Status: " + complaintStatus;
+    }
+
+    public void validateComplaintStatus() {
+        if ("Pending".equals(complaintStatus)) {
+            JOptionPane.showMessageDialog(null, "The complaint is pending review.");
+        } else if ("Resolved".equals(complaintStatus)) {
+            JOptionPane.showMessageDialog(null, "The complaint has been resolved.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Complaint status not recognized.");
+        }
     }
 }

@@ -6,15 +6,28 @@ public class ComputerStatusChecker {
     private boolean beeps;
     private boolean hardDriveSpins;
 
-    public void requestStatusAndCheck() {
-        beeps = JOptionPane.showConfirmDialog(null, "Does the computer beep at startup?") == JOptionPane.YES_OPTION;
-        hardDriveSpins = JOptionPane.showConfirmDialog(null, "Does the hard drive spin?") == JOptionPane.YES_OPTION;
-
-        String message = determineStatus(beeps, hardDriveSpins);
-        JOptionPane.showMessageDialog(null, message);
+    public ComputerStatusChecker(boolean beeps, boolean hardDriveSpins) {
+        this.beeps = beeps;
+        this.hardDriveSpins = hardDriveSpins;
     }
 
-    private String determineStatus(boolean beeps, boolean hardDriveSpins) {
+    public boolean isBeeps() {
+        return beeps;
+    }
+
+    public void setBeeps(boolean beeps) {
+        this.beeps = beeps;
+    }
+
+    public boolean isHardDriveSpins() {
+        return hardDriveSpins;
+    }
+
+    public void setHardDriveSpins(boolean hardDriveSpins) {
+        this.hardDriveSpins = hardDriveSpins;
+    }
+
+    public String determineStatus() {
         if (beeps && hardDriveSpins) {
             return "Contact technical support.";
         } else if (beeps) {
@@ -24,5 +37,16 @@ public class ComputerStatusChecker {
         } else {
             return "Check the speaker connections.";
         }
+    }
+
+    @Override
+    public String toString() {
+        return determineStatus();
+    }
+
+    public void requestStatusAndCheck() {
+        setBeeps(JOptionPane.showConfirmDialog(null, "Does the computer beep at startup?") == JOptionPane.YES_OPTION);
+        setHardDriveSpins(JOptionPane.showConfirmDialog(null, "Does the hard drive spin?") == JOptionPane.YES_OPTION);
+        JOptionPane.showMessageDialog(null, toString());
     }
 }

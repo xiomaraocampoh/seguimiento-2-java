@@ -3,94 +3,80 @@ package Ejercicio3;
 import javax.swing.*;
 
 public class Loanbooks {
-    private String loanCode;
-    private String loanDate;
-    private String bookName;
-    private String userCode;
-    private int loanDays;
-    private boolean loanStatus = true;
 
-    public String getBookName() {
-        return bookName;
-    }
+        private String loanCode;
+        private String loanDate;
+        private String bookName;
+        private String userCode;
+        private int loanDays;
+        private boolean loanStatus;
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
+        // Constructor para inicializar todos los campos
+        public Loanbooks(String loanCode, String loanDate, String bookName, String userCode, int loanDays, boolean loanStatus) {
+            this.loanCode = loanCode;
+            this.loanDate = loanDate;
+            this.bookName = bookName;
+            this.userCode = userCode;
+            this.loanDays = loanDays;
+            this.loanStatus = loanStatus;
+        }
 
-    public String getLoanCode() {
-        return loanCode;
-    }
+        public String getBookName() {
+            return bookName;
+        }
 
-    public void setLoanCode(String loanCode) {
-        this.loanCode = loanCode;
-    }
+        public void setBookName(String bookName) {
+            this.bookName = bookName;
+        }
 
-    public String getLoanDate() {
-        return loanDate;
-    }
+        public String getLoanCode() {
+            return loanCode;
+        }
 
-    public void setLoanDate(String loanDate) {
-        this.loanDate = loanDate;
-    }
+        public void setLoanCode(String loanCode) {
+            this.loanCode = loanCode;
+        }
 
-    public int getLoanDays() {
-        return loanDays;
-    }
+        public String getLoanDate() {
+            return loanDate;
+        }
 
-    public void setLoanDays(int loanDays) {
-        this.loanDays = loanDays;
-    }
+        public void setLoanDate(String loanDate) {
+            this.loanDate = loanDate;
+        }
 
-    public boolean isLoanStatus() {
-        return loanStatus;
-    }
+        public int getLoanDays() {
+            return loanDays;
+        }
 
-    public void setLoanStatus(boolean loanStatus) {
-        this.loanStatus = loanStatus;
-    }
+        public void setLoanDays(int loanDays) {
+            this.loanDays = loanDays;
+        }
 
-    public String getUserCode() {
-        return userCode;
-    }
+        public boolean isLoanStatus() {
+            return loanStatus;
+        }
 
-    public void setUserCode(String userCode) {
-        this.userCode = userCode;
-    }
+        public void setLoanStatus(boolean loanStatus) {
+            this.loanStatus = loanStatus;
+        }
 
-    public void createLoan() {
-        loanCode = JOptionPane.showInputDialog(null, "Enter the loan code: ");
-        loanDate = JOptionPane.showInputDialog(null, "Enter the loan date: ");
-        bookName = JOptionPane.showInputDialog(null, "Enter the name of the book: ");
-        userCode = JOptionPane.showInputDialog(null, "Enter the user code: ");
-        loanDays = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of loan days: "));
-        String message = loanStatus ? "Loan Confirmed" : "Loan Denied";
-        JOptionPane.showMessageDialog(null, message);
-    }
+        public String getUserCode() {
+            return userCode;
+        }
 
-    public void consultLoanStatus() {
-        JOptionPane.showMessageDialog(null, "Loan Status: " + loanStatus);
-    }
+        public void setUserCode(String userCode) {
+            this.userCode = userCode;
+        }
 
-    public void consultLoanDetails() {
-        JOptionPane.showMessageDialog(null, "Loan Details:\n" +
-                "Loan Code: " + loanCode + "\n" +
-                "Loan Date: " + loanDate + "\n" +
-                "Book Name: " + bookName + "\n" +
-                "User Code: " + userCode + "\n" +
-                "Loan Days: " + loanDays + "\n" +
-                "Loan Status: " + loanStatus);
-    }
-
-    @Override
-    public String toString() {
-        return "Loanbooks{" +
-                "bookName='" + bookName + '\'' +
-                ", loanCode='" + loanCode + '\'' +
-                ", loanDate='" + loanDate + '\'' +
-                ", userCode='" + userCode + '\'' +
-                ", loanDays=" + loanDays +
-                ", loanStatus=" + loanStatus +
-                '}';
-    }
+        @Override
+        public String toString() {
+            return "Loan Details:\n" +
+                    "Loan Code: " + loanCode + "\n" +
+                    "Loan Date: " + loanDate + "\n" +
+                    "Book Name: " + bookName + "\n" +
+                    "User Code: " + userCode + "\n" +
+                    "Loan Days: " + loanDays + "\n" +
+                    "Loan Status: " + (loanStatus ? "Active" : "Completed");
+        }
 }

@@ -3,13 +3,19 @@ package Ejercicio10;
 import javax.swing.*;
 
 public class RentalCost {
-        private int washerType; // 1 for large, 2 for small
-        private int hours;
-        private int numberOfWashers;
-        int largeWasherRate = 4000;
-        int smallWasherRate = 3000;
-        int discountThreshold = 3;
-        double discountRate = 0.03 ;
+    private int washerType;
+    private int hours;
+    private int numberOfWashers;
+    private int largeWasherRate = 4000;
+    private int smallWasherRate = 3000;
+    private int discountThreshold = 3;
+    private double discountRate = 0.03;
+
+    public RentalCost(int washerType, int hours, int numberOfWashers) {
+        this.washerType = washerType;
+        this.hours = hours;
+        this.numberOfWashers = numberOfWashers;
+    }
 
     public double getDiscountRate() {
         return discountRate;
@@ -66,7 +72,8 @@ public class RentalCost {
     public void setWasherType(int washerType) {
         this.washerType = washerType;
     }
-    public void calculateAndDisplayCost(){
+
+    public void calculateAndDisplayCost() {
         int rate = (washerType == 1) ? largeWasherRate : smallWasherRate;
         double totalCost = rate * hours * numberOfWashers;
         if (numberOfWashers > discountThreshold) {
@@ -76,5 +83,17 @@ public class RentalCost {
         JOptionPane.showMessageDialog(null, "The total cost is: " + totalCost + " dollars.");
     }
 
+    @Override
+    public String toString() {
+        return "RentalCost Details:\n" +
+                "Washer Type: " + (washerType == 1 ? "Large" : "Small") + "\n" +
+                "Hours: " + hours + "\n" +
+                "Number of Washers: " + numberOfWashers + "\n" +
+                "Large Washer Rate: " + largeWasherRate + "\n" +
+                "Small Washer Rate: " + smallWasherRate + "\n" +
+                "Discount Threshold: " + discountThreshold + "\n" +
+                "Discount Rate: " + discountRate;
+    }
 }
+
 

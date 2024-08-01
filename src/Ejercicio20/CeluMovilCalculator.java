@@ -15,38 +15,42 @@ public class CeluMovilCalculator {
     private int movistarInternationalMinuteCost = 250;
     private int movistarDataPackageCost = 8000;
 
-    public void requestOperatorAndCalculateCost() {
-        String[] options = {"Tigo", "Claro", "Movistar"};
-        String operator = (String) JOptionPane.showInputDialog(null, "Select your operator:",
-                "Operator Selection",
-                JOptionPane.QUESTION_MESSAGE,
-                null,
-                options,
-                options[0]);
+    private String operator;
+    private int internationalMinutes;
+    private double totalCost;
 
-        if (operator == null) {
-            JOptionPane.showMessageDialog(null, "No operator selected.");
-            return;
-        }
-
-        int internationalMinutes = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of international minutes: "));
-        double totalCost = calculateTotalCost(operator, internationalMinutes);
-
-        String message = String.format("Total cost for %s:\nFixed cost: $%d\nInternational minute cost: $%d\nData package cost: $%d\nTotal: $%.2f",
-                operator,
-                getFixedCost(operator),
-                getInternationalMinuteCost(operator) * internationalMinutes,
-                getDataPackageCost(operator),
-                totalCost);
-
-        JOptionPane.showMessageDialog(null, message);
+    public CeluMovilCalculator(String operator, int internationalMinutes) {
+        this.operator = operator;
+        this.internationalMinutes = internationalMinutes;
+        this.totalCost = calculateTotalCost();
     }
 
-    private double calculateTotalCost(String operator, int internationalMinutes) {
-        return getFixedCost(operator) + (getInternationalMinuteCost(operator) * internationalMinutes) + getDataPackageCost(operator);
+    public String getOperator() {
+        return operator;
     }
 
-    private int getFixedCost(String operator) {
+    public void setOperator(String operator) {
+        this.operator = operator;
+    }
+
+    public int getInternationalMinutes() {
+        return internationalMinutes;
+    }
+
+    public void setInternationalMinutes(int internationalMinutes) {
+        this.internationalMinutes = internationalMinutes;
+        this.totalCost = calculateTotalCost();
+    }
+
+    public double getTotalCost() {
+        return totalCost;
+    }
+
+    private double calculateTotalCost() {
+        return getFixedCost() + (getInternationalMinuteCost() * internationalMinutes) + getDataPackageCost();
+    }
+
+    private int getFixedCost() {
         switch (operator) {
             case "Tigo":
                 return tigoFixedCost;
@@ -59,7 +63,7 @@ public class CeluMovilCalculator {
         }
     }
 
-    private int getInternationalMinuteCost(String operator) {
+    private int getInternationalMinuteCost() {
         switch (operator) {
             case "Tigo":
                 return tigoInternationalMinuteCost;
@@ -72,7 +76,7 @@ public class CeluMovilCalculator {
         }
     }
 
-    private int getDataPackageCost(String operator) {
+    private int getDataPackageCost() {
         switch (operator) {
             case "Tigo":
                 return tigoDataPackageCost;
@@ -83,5 +87,34 @@ public class CeluMovilCalculator {
             default:
                 return 0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Total cost for %s:\nFixed cost: $%d\nInternational minute cost: $%d\nData package cost: $%d\nTotal: $%.2f",
+                operator,
+                getFixedCost(),
+                getInternationalMinuteCost(),
+                getDataPackageCost(),
+                totalCost);
+    }
+
+    public void requestOperatorAndCalculateCost() {
+        String[] options = {"Tigo", "Claro", "Movistar"};
+        operator = (String) JOptionPane.showInputDialog(null, "Select your operator:",
+                "Operator Selection",
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[0]);
+
+        if (operator == null) {
+            JOptionPane.showMessageDialog(null, "No operator selected.");
+            return;
+        }
+
+        internationalMinutes = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of international minutes: "));
+        this.totalCost = calculateTotalCost();
+        JOptionPane.showMessageDialog(null, toString());
     }
 }
